@@ -1,0 +1,61 @@
+.conversation_box{
+    height: 80%;
+    /* position: relative; */
+    overflow-y: auto;
+}
+
+.top_buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.width70{
+    width: 70px;
+}
+.sender{
+    display: flex;
+    justify-content: space-between;
+}
+.notMe{
+    box-sizing: border-box;
+    padding-right: 60px;
+    text-align: left;
+    margin-top: 10px;
+    border-top: 1px solid black;
+}
+.me{
+    box-sizing: border-box;
+    padding-left: 60px;
+    text-align: right;
+    margin-top: 10px;
+    border-top: 1px solid black;
+}
+.font14{
+    font-size: 14px;
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+.message_box{
+    width: 80%;
+    height: 35px;
+}
+.top_align{
+    vertical-align: top;
+    height: 35px;
+    margin-left: 5px;
+}
+
+.bg-light{
+    width: auto;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.no_border_margin{
+    border: none;
+    margin-top: 0px;
+}

@@ -1,0 +1,36 @@
+.top_buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.width70{
+    width: 70px;
+}
+
+.chats{
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 50px 0px;
+    height: 200px;
+    margin-bottom: 10px;
+    background-color: gray;
+    border-radius: 20px;
+}
+.active_time{
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, transparent, white, transparent);
+}
+.member_count{
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, transparent, white, transparent);
+}
+
+.chats_new{
+    border: 1px solid green;
+    border-radius: 20px;
+    background-color: white;
+    opacity: .5;
+    margin-bottom: 20px;
+}

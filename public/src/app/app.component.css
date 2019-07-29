@@ -1,0 +1,23 @@
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
+/* *{
+    border: 1px dotted red;
+} */
+
+.container{
+    width: 414px;
+    height: 896px;
+    overflow-y: auto;
+    text-align: center;
+    background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#7db9e8 100%);
+}
+
+.left_align{
+    text-align: left;
+}
+.right_align{
+    text-align: right;
+}
+
+.font25{
+    font-size: 25px;
+}

@@ -1,0 +1,49 @@
+<div class="top_buttons">
+	<div class="left_align">
+		<button class="btn btn-primary btn-sm" [routerLink]="['/chats/dashboard']">Back</button>
+	</div>
+	<div class="right_align">
+		<input class="form-control" placeholder="Search">
+	</div>
+</div>
+
+<div class="conversation_box" #convo_box>
+	<div *ngFor="let s of sender; let i = index">
+		<!-- {{ chatHistory | json }} -->
+
+		<!-- TODO: have the scroll be all the way at the bottom when the page loads -->
+		<div class="notMe" *ngIf="i===0 && !sender[i]">
+			<div class="sender">
+				<p class="left_align">{{ chatHistory[i].name }}</p>
+				<p class="right_align">{{ chatHistory[i].date_time}}</p>
+			</div>
+			<p class="font14"><span class="bg-light">{{ chatHistory[i].content}}</span></p>
+		</div>
+		<div class="me" *ngIf="i===0 && sender[i]">
+			<div class="sender">
+				<p class="left_align">{{ chatHistory[i].date_time }}</p>
+				<p class="right_align">{{ chatHistory[i].name }}</p>
+			</div>
+			<p class="font14"><span class="bg-light">{{ chatHistory[i].content}}</span></p>
+		</div>
+		<div class="notMe" *ngIf="i!==0 && !sender[i]" [ngClass]="{ 'no_border_margin': chatHistory[i].name === chatHistory[i-1].name }">
+			<div class="sender" *ngIf="chatHistory[i].name !== chatHistory[i-1].name">
+				<p class="left_align">{{ chatHistory[i].name }}</p>
+				<p class="right_align">{{ chatHistory[i].date_time}}</p>
+			</div>
+			<p class="font14"><span class="bg-light">{{ chatHistory[i].content}}</span></p>
+		</div>
+		<div class="me" *ngIf="i!==0 && sender[i]" [ngClass]="{ 'no_border_margin': sender[i] === sender[i-1] }">
+			<div class="sender" *ngIf="sender[i] !== sender[i-1]">
+				<p class="left_align">{{ chatHistory[i].date_time }}</p>
+				<p class="right_align">{{ chatHistory[i].name }}</p>
+			</div>
+			<p class="font14"><span class="bg-light">{{ chatHistory[i].content}}</span></p>
+		</div>
+	</div>
+</div>
+
+<form (submit)=submitMessage()>
+	<textarea name="content" id="content" class="message_box" [(ngModel)]="message"></textarea>
+	<button class="btn btn-primary btn-sm top_align">Send</button>
+</form>
