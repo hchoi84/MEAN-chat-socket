@@ -25,6 +25,16 @@ Ideal Features:
 - Cosmetic adjustments (i.e. how chats are displayed, time display, date breaks, etc.)
 - Sort chat history by date and be able to search by word(s)
 
+Installation Instruction:
+If you want to try running the project, here's the instruction.
+Using Cmder, navigate to the project folder.
+Within the same directory of where package.json is, run "npm install"
+Then, navigate to public folder by doing cd public
+Do another "npm install" (this is to install the necessary modules for angular)
+Once that completes, do "ng build"
+Navigate back one folder by doing "cd .."
+Enter "nodemon server.js"
+
 2019-07-29 Update Log
 - Initial commit to git
 - For the past few days, I've been stuck on a bug that continues to add a socket listener.
